@@ -1,5 +1,5 @@
 name: WarlordsPartyManager
-version: ${project.artifactId}
+version: ${project.version}
 main: com.ebicep.warlordspartymanager.WarlordsPartyManager
 softdepend:
   - Warlords
