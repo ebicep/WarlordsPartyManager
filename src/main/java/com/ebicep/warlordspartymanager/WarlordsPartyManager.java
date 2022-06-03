@@ -25,12 +25,12 @@ public class WarlordsPartyManager extends JavaPlugin {
         new StreamCommand().register(this);
         getServer().getPluginManager().registerEvents(new PartyListener(), this);
 
-        getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[Warlords] Plugin is enabled");
+        getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[WarlordsPartyManager] Plugin is enabled");
     }
 
     @Override
     public void onDisable() {
-        getServer().getConsoleSender().sendMessage(ChatColor.RED + "[Warlords] Plugin is disabled");
+        getServer().getConsoleSender().sendMessage(ChatColor.RED + "[WarlordsPartyManager] Plugin is disabled");
     }
 
     public static WarlordsPartyManager getWarlordsPartyManager() {

@@ -9,3 +9,6 @@ commands:
     aliases:
       - party
       - p
+  stream:
+    description: Creates a new party where anyone can join
+    usage: /stream
