@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.ebicep</groupId>
-    <artifactId>WarlordsPartyManager</artifactId>
-    <version>1.0.0</version>
+    <artifactId>warlords-party-manager</artifactId>
+    <version>2.0.2</version>
 
-    <name>${project.groupId}:${project.artifactId}</name>
+    <name>WarlordsPartyManager</name>
     <description>Party Manager for the Warlords Plugin</description>
     <url>https://github.com/ebicep/WarlordsPartyManager</url>
 
@@ -18,6 +18,16 @@
             <url>https://www.opensource.org/licenses/mit-license.php</url>
         </license>
     </licenses>
+
+    <developers>
+        <developer>
+            <name>ebicep</name>
+            <email>ebicep314@gmail.com</email>
+            <organization>ebicep</organization>
+            <organizationUrl>https://github.com/ebicep</organizationUrl>
+        </developer>
+    </developers>
+
 
     <scm>
         <connection>scm:git:git://github.com/ebicep/WarlordsPartyManager.git</connection>
@@ -37,6 +47,16 @@
     </distributionManagement>
 
     <build>
+        <resources>
+            <resource>
+                <filtering>true</filtering>
+                <targetPath>.</targetPath>
+                <directory>${basedir}/src/main/resources/</directory>
+                <includes>
+                    <include>**/*.yml</include>
+                </includes>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -58,6 +78,9 @@
                         <goals>
                             <goal>shade</goal>
                         </goals>
+                        <configuration>
+                            <outputFile>${outputFilePath}</outputFile>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
@@ -130,12 +153,24 @@
     </repositories>
 
     <dependencies>
-        <!-- Spigot api -->
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
             <version>1.8.8-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.ebicep</groupId>
+            <artifactId>warlords</artifactId>
+            <version>MASTER-RC7.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.github.ebicep</groupId>
+            <artifactId>chat-utils</artifactId>
+            <version>1.0.0</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
