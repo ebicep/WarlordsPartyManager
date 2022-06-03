@@ -4,6 +4,7 @@ import com.ebicep.warlordspartymanager.commands.PartyCommand;
 import com.ebicep.warlordspartymanager.commands.StreamCommand;
 import com.ebicep.warlordspartymanager.listeners.PartyListener;
 import com.ebicep.warlordspartymanager.party.Party;
+import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
@@ -23,11 +24,13 @@ public class WarlordsPartyManager extends JavaPlugin {
         new PartyCommand().register(this);
         new StreamCommand().register(this);
         getServer().getPluginManager().registerEvents(new PartyListener(), this);
+
+        getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[Warlords] Plugin is enabled");
     }
 
     @Override
     public void onDisable() {
-
+        getServer().getConsoleSender().sendMessage(ChatColor.RED + "[Warlords] Plugin is disabled");
     }
 
     public static WarlordsPartyManager getWarlordsPartyManager() {

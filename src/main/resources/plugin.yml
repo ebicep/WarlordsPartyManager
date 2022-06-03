@@ -1,11 +1,11 @@
 name: WarlordsPartyManager
 version: ${project.artifactId}
-main: com.github.ebicep.warlordspartymanager.WarlordsPartyManager
-depend:
+main: com.ebicep.warlordspartymanager.WarlordsPartyManager
+softdepend:
   - Warlords
 commands:
   party:
     description: Party options
     aliases:
-      - p
       - party
+      - p
