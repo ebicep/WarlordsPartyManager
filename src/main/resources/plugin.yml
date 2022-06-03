@@ -3,7 +3,6 @@ version: ${project.artifactId}
 main: com.github.ebicep.warlordspartymanager.WarlordsPartyManager
 depend:
   - Warlords
-  - ChatUtils
 commands:
   party:
     description: Party options
