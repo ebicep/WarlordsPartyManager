@@ -1,9 +1,9 @@
 package com.ebicep.warlordspartymanager.commands;
 
 import com.ebicep.chatutils.ChatUtils;
+import com.ebicep.warlordsbotmanager.WarlordsBotManager;
 import com.ebicep.warlordspartymanager.WarlordsPartyManager;
 import com.ebicep.warlordspartymanager.party.Party;
-import com.ebicep.warlordsqueuemanager.WarlordsBotManager;
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Bukkit;
