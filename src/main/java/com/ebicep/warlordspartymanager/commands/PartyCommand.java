@@ -1,11 +1,11 @@
 package com.ebicep.warlordspartymanager.commands;
 
 import com.ebicep.chatutils.ChatUtils;
-import com.ebicep.jda.queuesystem.QueueManager;
 import com.ebicep.warlords.poll.polls.PartyPoll;
 import com.ebicep.warlordspartymanager.WarlordsPartyManager;
 import com.ebicep.warlordspartymanager.party.Party;
 import com.ebicep.warlordspartymanager.party.PartyPlayer;
+import com.ebicep.warlordsqueuemanager.queuesystem.QueueManager;
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.ComponentBuilder;
 import net.md_5.bungee.api.chat.HoverEvent;

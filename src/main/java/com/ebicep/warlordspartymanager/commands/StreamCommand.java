@@ -1,9 +1,9 @@
 package com.ebicep.warlordspartymanager.commands;
 
 import com.ebicep.chatutils.ChatUtils;
-import com.ebicep.jda.BotManager;
 import com.ebicep.warlordspartymanager.WarlordsPartyManager;
 import com.ebicep.warlordspartymanager.party.Party;
+import com.ebicep.warlordsqueuemanager.WarlordsBotManager;
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Bukkit;
@@ -47,7 +47,7 @@ public class StreamCommand implements CommandExecutor {
                         ChatUtils.sendCenteredMessageWithEvents(onlinePlayer, Collections.singletonList(message));
                         ChatUtils.sendCenteredMessage(onlinePlayer, ChatColor.BLUE.toString() + ChatColor.BOLD + "------------------------------------------");
                     });
-            BotManager.sendMessageToNotificationChannel("[PARTY] **" + player.getName() + "** created a public party! /p join " + player.getName(), true, false);
+            WarlordsBotManager.sendMessageToNotificationChannel("[PARTY] **" + player.getName() + "** created a public party! /p join " + player.getName(), true, false);
         }
 
         return true;
